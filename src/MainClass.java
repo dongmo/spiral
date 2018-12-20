@@ -1,4 +1,13 @@
 import java.util.Scanner;
+
+/*
+ * @author Samuel
+ * 
+ * Java class whose main method takes in parameter an integer N and outputs an html text
+	that would render a page containing a NxN table filled with number from 1 to N*N in spiral in
+	the table.
+ */
+
 public class MainClass 
 {
     public static void main(String args[])
@@ -59,7 +68,7 @@ public class MainClass
             
             maxRow--;
         }
-        System.out.println("Array Spiral: ");
+        System.out.println("Array Spiral: \n");
         for (int i = 0; i < spiral.length; i++)
         {
             for (int j = 0; j < spiral.length; j++)
@@ -69,13 +78,16 @@ public class MainClass
             
             System.out.println();
         }
-        System.out.println("HTML Text format Spiral: ");
+        System.out.println("HTML Text format Spiral: \n");
         
         System.out.println(toHTML(spiral));
     }
     
     public static String toHTML(int[][] data){
         StringBuilder sb = new StringBuilder();
+        
+        //Construct the table html text 
+        
         sb.append("<table border='1'>\n");
         for(int row = 0; row < data.length; row++){
             sb.append("\t<tr>\n");
